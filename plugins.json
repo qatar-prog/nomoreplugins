@@ -41,9 +41,9 @@
       {
         "date": "2020-07-21",
         "sha512sum": "D445BF226A02388AE4361E495DE5C32198762DD3E622337809DC0205E4F3BCFA9C738F63F89A3B1DFDC7EA0F8D7658F8B040AC077D95D4654AC06BBF903AAEFC",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkassistcombat-0.0.3.jar?raw=true",
-        "requires":"0.0.3"
+        "requires":"0.0.1"
       }
     ]
   },
