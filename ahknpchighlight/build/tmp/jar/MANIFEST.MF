@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Plugin-Version: 1.0.0
+Plugin-Id: nomorenpcmarkers-plugin
+Plugin-Provider: OpenOSRS
+Plugin-Description: Highlight NPCs on-screen and/or on the minimap
+Plugin-License: 3-Clause BSD License
+

@@ -1,6 +1,7 @@
 rootProject.name = "nomoreplugins"
 
-include(":NoMoreAgility")
+include(":nomoreagility")
+include(":nomorewintertodt")
 
 for (project in rootProject.children) {
     project.apply {

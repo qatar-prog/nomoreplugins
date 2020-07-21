@@ -1,4 +1,4 @@
-name: ExternalPlugins - CI (push)
+name: nomoreplugins - CI (push)
 
 on:
   push:

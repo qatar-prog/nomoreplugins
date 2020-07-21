@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Plugin-Version: 0.0.3
+Plugin-Id: nomoreskilling-plugin
+Plugin-Provider: OpenOSRS
+Plugin-Description: A plugin to assist in the creation of AHK Scripts.
+Plugin-License: 3-Clause BSD License
+

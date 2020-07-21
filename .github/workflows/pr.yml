@@ -1,4 +1,4 @@
-name: ExternalPlugins - CI (PR)
+name: nomoreplugins - CI (PR)
 
 on:
   pull_request:
