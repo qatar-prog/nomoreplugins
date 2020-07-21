@@ -1,35 +1,5 @@
 [
   {
-    "projectUrl": "https://discordapp.com/invite/gsoft",
-    "provider": "Ganom",
-    "name": "Anonymizer",
-    "description": "Anonymizes your rsn and others.",
-    "id": "anonymizer-plugin",
-    "releases": [
-      {
-        "date": "2020-04-29",
-        "sha512sum": "B2567186BBA116EB9FD18B8BA5D1E67E82DED283CE7A9C2F9BE063129C13223BEB7437CC9D84B185200E409A192C9F98458C7B58D884E24B01677F02E4C27DD1",
-        "version": "5.14.0",
-        "url": "https://github.com/Ganom/ExternalPlugins/blob/master/release/Anonymizer-5.14.0.jar?raw=true",
-        "requires": "0.0.1"
-      },
-      {
-        "date": "2020-06-09",
-        "sha512sum": "CA400A4421E53D9A1CA6703EBD8F759AC8F0509F4AB04D74A59AB1D2F7A84424E3D75171B7D3C69B47B09C215F0677541A6B66DFC367BCB79E788A47DA8DBD64",
-        "version": "5.15.0",
-        "url": "https://github.com/Ganom/ExternalPlugins/blob/master/release/Anonymizer-5.15.0.jar?raw=true",
-        "requires": "0.0.1"
-      },
-      {
-        "date": "2020-06-18",
-        "sha512sum": "4794AA0A065BF043898CE30119A6DD43EC963CF743C9752590C50F32D3D0DAA911FD973046A9F7525CC4E5E2B57517276C3194CDDAF38F3D6AAE03CB26A6C697",
-        "version": "5.16.0",
-        "url": "https://github.com/Ganom/ExternalPlugins/blob/master/release/Anonymizer-5.16.0.jar?raw=true",
-        "requires": "0.0.1"
-      }
-    ]
-  },
-  {
     "projectUrl": "https://github.com/TomMartow/nomoreplugins",
     "provider": "TomMartow",
     "name": "NoMoreAgility",
@@ -38,9 +8,9 @@
     "releases": [
       {
         "date": "2020-04-29",
-        "sha512sum": "D2338FFD9299F3D5A2B57C271BC0C62DCA1E6DCA08ECB93E1350E25B56A7FD1C9B51F85AE2C2C07522EBB0639DF699CEFF934440C3F93664168100F83CE2A336",
+        "sha512sum": "ddd13548c3de776753c12c5af08bd7af",
         "version": "0.0.1",
-        "url": "https://github.com/Ganom/ExternalPlugins/blob/master/release/AutoClicker-5.12.0.jar?raw=true",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/NoMoreAgility-0.0.1.jar?raw=true",
         "requires": "0.0.1"
       }
     ]
