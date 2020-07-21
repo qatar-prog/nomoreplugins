@@ -1,6 +1,6 @@
 rootProject.name = "nomoreplugins"
 
-include(":Anonymizer")
+include(":NoMoreAgility")
 
 for (project in rootProject.children) {
     project.apply {

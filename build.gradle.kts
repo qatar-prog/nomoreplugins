@@ -71,7 +71,7 @@ subprojects {
         maxWarnings = 0
         toolVersion = "8.25"
         isShowViolations = true
-        isIgnoreFailures = false
+        isIgnoreFailures = true
     }
 
     configure<JavaPluginConvention> {
