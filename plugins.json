@@ -2,9 +2,9 @@
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "TomMartow",
-    "name": "NoMoreAgility",
+    "name": "NoMore Agility",
     "description": "A plugin to assist the creation of an AutoHotkey Agility script.",
-    "id": "nomoreagility-plugin",
+    "id": "nomoreagility",
     "releases": [
       {
         "date": "2020-07-21",
@@ -20,7 +20,7 @@
     "provider": "TomMartow",
     "name": "NoMore Wintertodt",
     "description": "A plugin to assist the creation of an AutoHotkey Wintertodt script.",
-    "id": "nomorewintertodt-plugin",
+    "id": "nomorewintertodt",
     "releases": [
       {
         "date": "2020-07-21",
