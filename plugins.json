@@ -8,7 +8,7 @@
     "releases": [
       {
         "date": "2020-04-29",
-        "sha512sum": "ddd13548c3de776753c12c5af08bd7af",
+        "sha512sum": "60C6EE85F767224F884F38D8C911B95114CAED59D6D61B5A73273E78D83036309573FBCB36A7FE2784544D0C08713ADFFE60C16A5E6CC01C59F34C7FED925087",
         "version": "0.0.1",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/NoMoreAgility-0.0.1.jar?raw=true",
         "requires": "0.0.1"
