@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Plugin-Version: 0.0.4
 Plugin-Id: nomoremiscplugins-plugin
-Plugin-Provider: OpenOSRS
+Plugin-Provider: NoMoreAHK
 Plugin-Description: Numerous miscellaneous plugins.
-Plugin-License: 3-Clause BSD License
+Plugin-License: GNU General Public License v3.0
 

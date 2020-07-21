@@ -30,5 +30,133 @@
         "requires":"0.0.1"
       }
     ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Combat",
+    "description": "A plugin to assist the creation of an AutoHotkey combat script.",
+    "id": "ahkassistcombat",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "D445BF226A02388AE4361E495DE5C32198762DD3E622337809DC0205E4F3BCFA9C738F63F89A3B1DFDC7EA0F8D7658F8B040AC077D95D4654AC06BBF903AAEFC",
+        "version": "0.0.3",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkassistcombat-0.0.3.jar?raw=true",
+        "requires":"0.0.3"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Skilling",
+    "description": "A plugin to assist the creation of an AutoHotkey skilling script.",
+    "id": "ahkassistskilling",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "16DC7F45F4C5A727A2C928B64F3065EA45665272C513954A4AFA453EA5FAA5C164CDFF2EF5221C2AD02757047F87A88BA667533BFC7BE0D1EE4AEB57655DB094",
+        "version": "0.0.3",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkassistskilling-0.0.3.jar?raw=true",
+        "requires":"0.0.3"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Ground Items",
+    "description": "A plugin to render overlays over items on the ground.",
+    "id": "ahkgrounditems",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "DE3CE0D74512BD94A683EB4FFA21DA9B0D4ACEBBA65B5640FDD02D30146778D63B4893311800A02F329E270452DF722D5F62A7CC83A9FD0A9C98A307A80C3443",
+        "version": "1.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkgrounditems-1.0.1.jar?raw=true",
+        "requires":"1.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Ground Marker",
+    "description": "A plugin to render an overlay over the individual world tiles.",
+    "id": "ahkgroundmarkers",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "86A8364215742D77142844F98CC049FF9ADE658824A17C91BBE9C1019C1B332126939AC461603842C166FBA5117D5324B5D2C22358638B3F1E43F71437C641E4",
+        "version": "1.0.0",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkgroundmarkers-1.0.0.jar?raw=true",
+        "requires":"1.0.0"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore NPC Highlight",
+    "description": "A plugin to render an overlay over NPC's.",
+    "id": "ahknpchighlight",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "09A5E55B952BB7BF025CABEBC3E3F7CA6BDEC3C1D0CBA24A6A625D0CED19BD0F44E8DEEF0A1D1537BC0B3134D1ED3100D94DC959841A396063C20081207D3ED5",
+        "version": "1.0.0",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahknpchighlight-1.0.0.jar?raw=true",
+        "requires":"1.0.0"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Inventory Tags",
+    "description": "A plugin to render an overlay over an inventory item.",
+    "id": "ahkinventorytags",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "15BCB77EF2CCB113F18B12368B03A0B71E6AEC6704CCCBD3D658BF646F83A5DA1015245AFB3EF6D87829E6E1EAFE8CB9586E097AB9A347EBCC9CBD6FAD733BD6",
+        "version": "1.0.0",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkinventorytags-1.0.0.jar?raw=true",
+        "requires":"1.0.0"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Object Indicators",
+    "description": "A plugin to render an overlay over an object.",
+    "id": "ahkobjectindicators",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "40F17577F5AC6E8C8A1AD8249E22A2BD6CF4529BB8475C1B478A74C8120010B73EC6C4B3F97D60E2E0599145BD0E44E2679FECE6506CAC62AD59E106FCB15B7F",
+        "version": "1.0.0",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkobjectindicators-1.0.0.jar?raw=true",
+        "requires":"1.0.0"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "TomMartow",
+    "name": "NoMore Misc",
+    "description": "Random utilities.",
+    "id": "amiscplugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "BDC804B9245C9C2E239A43D9C9A6B9B12FF625C065CB66BB91BB5C4A321F453C6ACD87C7FA2E161044F36825EFF28CF843F8B0786CEC242E24E288742E236D1D",
+        "version": "0.0.4",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkobjectindicators-1.0.0.jar?raw=true",
+        "requires":"0.0.4"
+      }
+    ]
   }
 ]
