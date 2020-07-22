@@ -74,7 +74,7 @@
         "date": "2020-07-21",
         "sha512sum": "46868310CC217AF2E100748E0C2AFD16DE950D662C3786AF41EF158082BE9C9CB60621B2C96822912CAE3EA146A79F0D31F05777079CDD976FE5122213EE7457",
         "version": "0.0.1",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/aiscplugin-0.0.1.jar?raw=true",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/amiscplugin-0.0.1.jar?raw=true",
         "requires":"0.0.1"
       }
     ]
