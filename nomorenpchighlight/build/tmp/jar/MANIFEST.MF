@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Plugin-Version: 0.0.1
-Plugin-Id: nomorenpcmarkers-plugin
+Plugin-Id: nomorenpchighlight-plugin
 Plugin-Provider: NoMoreAHK
 Plugin-Description: Highlight NPCs on-screen and/or on the minimap
 Plugin-License: GNU General Public License v3.0

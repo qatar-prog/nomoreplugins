@@ -25,7 +25,7 @@
 
 version = "0.0.1"
 
-project.extra["PluginName"] = "NoMore Misc Plugins"
+project.extra["PluginName"] = "A Misc Plugin"
 project.extra["PluginDescription"] = "Numerous miscellaneous plugins."
 
 tasks {

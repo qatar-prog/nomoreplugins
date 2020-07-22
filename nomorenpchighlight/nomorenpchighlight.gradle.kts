@@ -25,7 +25,7 @@
 
 version = "0.0.1"
 
-project.extra["PluginName"] = "NoMore NPC Markers"
+project.extra["PluginName"] = "NoMore NPC Highlight"
 project.extra["PluginDescription"] = "Highlight NPCs on-screen and/or on the minimap"
 
 tasks {

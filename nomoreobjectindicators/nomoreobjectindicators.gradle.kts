@@ -25,7 +25,7 @@
 
 version = "0.0.1"
 
-project.extra["PluginName"] = "NoMore Object Marker"
+project.extra["PluginName"] = "NoMore Object Indicators"
 project.extra["PluginDescription"] = "Enable marking of objects using the Shift key"
 
 tasks {

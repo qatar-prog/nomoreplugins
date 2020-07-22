@@ -25,7 +25,7 @@
 
 version = "0.0.1"
 
-project.extra["PluginName"] = "NoMore Loot Markers"
+project.extra["PluginName"] = "NoMore Ground Items"
 project.extra["PluginDescription"] = "Highlight ground items and/or show price information"
 
 tasks {
