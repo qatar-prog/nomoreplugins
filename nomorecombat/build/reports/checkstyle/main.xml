@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.25">
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomorecombat\NoMoreCombatConfig.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomoreskilling\NoMoreCombatConfig.java">
 <error line="29" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="32" column="52" severity="error" message="&apos;{&apos; at column 52 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="34" severity="error" message="Indent must use tab characters" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
@@ -1596,7 +1596,7 @@
 <error line="1677" severity="error" message="Indent must use tab characters" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="1678" severity="error" message="Indent must use tab characters" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomorecombat\NoMoreCombatInventoryOverlay.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomoreskilling\NoMoreCombatInventoryOverlay.java">
 <error line="16" column="62" severity="error" message="&apos;{&apos; at column 62 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="27" column="158" severity="error" message="&apos;{&apos; at column 151 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="37" column="95" severity="error" message="&apos;{&apos; at column 88 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
@@ -1673,11 +1673,11 @@
 <error line="250" column="108" severity="error" message="&apos;/&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 <error line="256" column="40" severity="error" message="&apos;{&apos; at column 33 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomorecombat\NoMoreCombatPlugin.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomoreskilling\NoMoreCombatPlugin.java">
 <error line="47" column="48" severity="error" message="&apos;{&apos; at column 48 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="71" column="71" severity="error" message="&apos;{&apos; at column 64 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomorecombat\NoMoreCombatSceneOverlay.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorecombat\src\main\java\net\runelite\client\plugins\nomoreskilling\NoMoreCombatSceneOverlay.java">
 <error line="36" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="37" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="45" column="48" severity="error" message="&apos;{&apos; at column 48 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>

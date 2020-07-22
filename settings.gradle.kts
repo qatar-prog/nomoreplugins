@@ -3,7 +3,7 @@ rootProject.name = "nomoreplugins"
 include(":nomorewintertodt")
 include(":nomoreagility")
 include(":nomorecombat")
-include(":ahkassistskilling")
+include(":nomoreskilling")
 include(":ahkgrounditems")
 include(":ahkgroundmarkers")
 include(":ahkinventorytags")
