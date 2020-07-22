@@ -1,7 +1,7 @@
 [
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMore",
+    "provider": "NoMoreAHK",
     "name": "NoMore Agility",
     "description": "A plugin to assist the creation of an AutoHotkey Agility script.",
     "id": "nomoreagility-plugin",
@@ -17,7 +17,7 @@
   },
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMore",
+    "provider": "NoMoreAHK",
     "name": "NoMore Wintertodt",
     "description": "A plugin to assist the creation of an AutoHotkey Wintertodt script.",
     "id": "nomorewintertodt-plugin",
@@ -33,10 +33,10 @@
   },
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMore",
+    "provider": "NoMoreAHK",
     "name": "NoMore Combat",
     "description": "A plugin to assist the creation of an AutoHotkey combat script.",
-    "id": "ahkassistcombat-plugin",
+    "id": "nomorecombat-plugin",
     "releases": [
       {
         "date": "2020-07-21",
