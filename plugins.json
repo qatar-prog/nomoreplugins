@@ -1,7 +1,7 @@
 [
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMoreAHK",
+    "provider": "NoMore",
     "name": "NoMore Agility",
     "description": "A plugin to assist the creation of an AutoHotkey Agility script.",
     "id": "nomoreagility-plugin",
@@ -17,7 +17,7 @@
   },
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMoreAHK",
+    "provider": "NoMore",
     "name": "NoMore Wintertodt",
     "description": "A plugin to assist the creation of an AutoHotkey Wintertodt script.",
     "id": "nomorewintertodt-plugin",
@@ -27,6 +27,22 @@
         "sha512sum": "B76091AD48B1080269EC845BA4CE43BC1450FF7705A76AAAB738925967A550880F19EF012FF162C5878422166BD377D24994F5AF53A0B9E25B5D33837A81853F",
         "version": "0.0.1",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMore",
+    "name": "NoMore Combat",
+    "description": "A plugin to assist the creation of an AutoHotkey combat script.",
+    "id": "ahkassistcombat-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "99E25B7AAA923D8B4703778CA328C641B6B017A8C08B20135C3C91A52E2D35182BC7FBE191E95F7F6B5F1C663EB69C8789FF30DD529595ED92D6FD59A882BC18",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkassistcombat-0.0.1.jar?raw=true",
         "requires":"0.0.1"
       }
     ]
