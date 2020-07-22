@@ -40,9 +40,9 @@
     "releases": [
       {
         "date": "2020-07-21",
-        "sha512sum": "99E25B7AAA923D8B4703778CA328C641B6B017A8C08B20135C3C91A52E2D35182BC7FBE191E95F7F6B5F1C663EB69C8789FF30DD529595ED92D6FD59A882BC18",
+        "sha512sum": "75894146CBB6F7EBBEFE573D4536DB0D99855E58B603BAC9DCDCE32BA24E5B4F66BB54F1053F4006BD693995FCDEF07E8F7F43B955F01B181EA7E859065DF51C",
         "version": "0.0.1",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/ahkassistcombat-0.0.1.jar?raw=true",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorecombat-0.0.1.jar?raw=true",
         "requires":"0.0.1"
       }
     ]
