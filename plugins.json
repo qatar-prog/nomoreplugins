@@ -62,5 +62,101 @@
         "requires":"0.0.1"
       }
     ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "A Misc Plugin",
+    "description": "Misc things and stuff.",
+    "id": "amiscplugin-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "46868310CC217AF2E100748E0C2AFD16DE950D662C3786AF41EF158082BE9C9CB60621B2C96822912CAE3EA146A79F0D31F05777079CDD976FE5122213EE7457",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/aiscplugin-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore Ground Items",
+    "description": "A plugin to render an overlay over dropped items.",
+    "id": "nomoregrounditems-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "74BA3EC91509E47D0CB35555B5DF5EF85EFB5700B2A288025698A32E4706AF38DD5829A5D1158A29146F26ECA15FFAA6756F934DB66DBE3A0572B41F99AB27B1",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoregrounditems-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore Ground Markers",
+    "description": "A plugin to render an overlay over the world tiles.",
+    "id": "nomoregroundmarkers-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "3B319D4D77CC21768CBF9B9070EA74B050586CEC926559493F62D3EC69886410B23F3A52AE7FFFEF9260887D68499F1E2126B1C552AC8D4B752686107F85B0EC",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoregroundmarkers-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore Inventory Tags",
+    "description": "A plugin to render an overlay over inventory items.",
+    "id": "nomoreinventorytags-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "13ACADEF4E7F763BD5205D56B15D8F42DF4005A9D188D0445AD855B087D86AB4C6EFFB51130F2024C9C9CFB48A9CA7E38BBFD4CC39DF4C16F978AFF54396250B",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoreinventorytags-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore NPC Highlight",
+    "description": "A plugin to render an overlay over non-playable characters.",
+    "id": "nomorenpchighlight-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "3368725C549476445CF8382C982B3EADF6E41EBCB40C5C8AEEDF4B005DC3432E12DD26EBA3AE64A298EDC4F5BAC943BD8E500A39B03BCC22ECBBD9E05B8B351D",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorenpchighlight-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore Object Indicators",
+    "description": "A plugin to render an overlay over game objects.",
+    "id": "nomoreobjectindicators-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "55BBD88C93131DF9C52A59068F2D00268562BF55E17730D39C75290439F1A380271066B4B2CB03C26E195BAFC74967BB8C89CA997B8BD57EB754D959948ACD94",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoreobjectindicators-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
   }
 ]
