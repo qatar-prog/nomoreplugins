@@ -23,7 +23,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-version = "0.0.3"
+version = "0.0.1"
 
 project.extra["PluginName"] = "NoMore Skilling"
 project.extra["PluginDescription"] = "A plugin to assist in the creation of AHK Scripts."

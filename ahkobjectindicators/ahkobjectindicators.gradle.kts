@@ -23,7 +23,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-version = "1.0.0"
+version = "0.0.1"
 
 project.extra["PluginName"] = "NoMore Object Marker"
 project.extra["PluginDescription"] = "Enable marking of objects using the Shift key"
