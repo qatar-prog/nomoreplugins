@@ -3,7 +3,7 @@
 <file name="C:\Users\thoma\IdeaProjects\nomoreplugins\aplugintutorial\src\main\java\net\runelite\client\plugins\aplugintutorial\APluginTutorialConfig.java">
 <error line="27" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="53" column="37" severity="error" message="&apos;{&apos; at column 30 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="66" column="37" severity="error" message="&apos;{&apos; at column 30 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="66" column="39" severity="error" message="&apos;{&apos; at column 32 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="75" column="36" severity="error" message="&apos;{&apos; at column 29 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="84" column="33" severity="error" message="&apos;{&apos; at column 26 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="97" column="38" severity="error" message="&apos;{&apos; at column 31 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>

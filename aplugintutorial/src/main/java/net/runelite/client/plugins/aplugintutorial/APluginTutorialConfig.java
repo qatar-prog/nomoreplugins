@@ -52,7 +52,7 @@ public interface APluginTutorialConfig extends Config
 	)
 	default Enum1 valueChoice() { return Enum1.VALUE1; }
 
-	@ConfigTitleSection(
+	@ConfigItem(
 			position = 3,
 			keyName = "secondTitle",
 			name = "Hidden if value 1",
@@ -63,7 +63,7 @@ public interface APluginTutorialConfig extends Config
 			unhideValue = "VALUE1"
 
 	)
-	default Title secondTitle() { return new Title(); }
+	default String stringConfig() { return "hello"; }
 
 	@ConfigTitleSection(
 			position = 4,
