@@ -66,25 +66,6 @@ public class NoMoreWintertodtOverlay extends Overlay
 		LocalPoint playerLocation = client.getLocalPlayer().getLocalLocation();
 		Point mousePosition = client.getMouseCanvasPosition();
 
-		// Responsible for the Wintertodt widgets manipulation.
-		Widget widget = client.getWidget(396,2);
-		if (widget != null) {
-			switch (config.wintertotdHUD()) {
-				case VISIBLE:
-					widget.setHidden(false);
-					break;
-				case HIDDEN:
-					widget.setHidden(true);
-					break;
-				case WAITING:
-					if (plugin.isMinigameActive())
-						widget.setHidden(false);
-					else
-						widget.setHidden(true);
-					break;
-			}
-		}
-
 		if (plugin.isMinigameActive()) {
 
 			// Responsible for checks on the Pyromancer animations.
@@ -148,11 +129,23 @@ public class NoMoreWintertodtOverlay extends Overlay
 
 			});
 		}
-
 		if (!plugin.isMinigameActive()
 				&& config.displayMinigameStatus()) {
 			graphics.setColor(Color.RED);
 			graphics.fillRect(0,0,5,5);
+		}
+
+		// Responsible for the Wintertodt widgets manipulation.
+		Widget widget = client.getWidget(396,2);
+		if (widget != null) {
+			switch (config.wintertotdHUD()) {
+				case VISIBLE:
+					widget.setHidden(false);
+					break;
+				case HIDDEN:
+					widget.setHidden(true);
+					break;
+			}
 		}
 		return null;
 	}
