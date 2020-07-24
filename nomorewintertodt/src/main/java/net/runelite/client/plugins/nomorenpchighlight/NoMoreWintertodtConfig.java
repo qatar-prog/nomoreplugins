@@ -326,7 +326,7 @@ public interface NoMoreWintertodtConfig extends Config
 	)
 	default WidgetStyle wintertotdHUD()
 	{
-		return WidgetStyle.WAITING;
+		return WidgetStyle.MIXED;
 	}
 
 }

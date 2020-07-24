@@ -40,11 +40,6 @@ import net.runelite.client.ui.overlay.OverlayUtil;
 
 public class NoMoreWintertodtOverlay extends Overlay
 {
-	private static final Color TRANSPARENT = new Color(0, 0, 0, 0);
-
-	// Anything but white text is quite hard to see since it is drawn on
-	// a dark background
-	private static final Color TEXT_COLOR = Color.WHITE;
 
 	private final Client client;
 	private final NoMoreWintertodtPlugin plugin;
@@ -60,6 +55,8 @@ public class NoMoreWintertodtOverlay extends Overlay
 		setLayer(OverlayLayer.ABOVE_SCENE);
 	}
 
+	private boolean gameActive;
+
 	@Override
 	public Dimension render(Graphics2D graphics)
 	{
@@ -67,7 +64,7 @@ public class NoMoreWintertodtOverlay extends Overlay
 		Point mousePosition = client.getMouseCanvasPosition();
 
 		if (plugin.isMinigameActive()) {
-
+			gameActive = true;
 			// Responsible for checks on the Pyromancer animations.
 			for (NPC pyromancer : plugin.getNpcs()) {
 
@@ -129,10 +126,12 @@ public class NoMoreWintertodtOverlay extends Overlay
 
 			});
 		}
-		if (!plugin.isMinigameActive()
-				&& config.displayMinigameStatus()) {
-			graphics.setColor(Color.RED);
-			graphics.fillRect(0,0,5,5);
+		if (!plugin.isMinigameActive()) {
+			gameActive = false;
+			if (config.displayMinigameStatus()) {
+				graphics.setColor(Color.RED);
+				graphics.fillRect(0, 0, 5, 5);
+			}
 		}
 
 		// Responsible for the Wintertodt widgets manipulation.
@@ -145,11 +144,8 @@ public class NoMoreWintertodtOverlay extends Overlay
 				case HIDDEN:
 					widget.setHidden(true);
 					break;
-				case WAITING:
-					if (plugin.isMinigameActive())
-						widget.setHidden(false); // fuck knows why this is false.
-					else
-						widget.setHidden(true); // fuck knows why this is true.
+				case MIXED:
+					widget.setHidden(gameActive);
 					break;
 			}
 		}

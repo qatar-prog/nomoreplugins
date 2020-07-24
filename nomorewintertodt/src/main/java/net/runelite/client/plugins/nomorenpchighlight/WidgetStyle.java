@@ -28,5 +28,5 @@ public enum WidgetStyle
 {
 	VISIBLE,
 	HIDDEN,
-	WAITING;
+	MIXED;
 }
