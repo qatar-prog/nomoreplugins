@@ -40,7 +40,7 @@
     "releases": [
       {
         "date": "2020-07-21",
-        "sha512sum": "",
+        "sha512sum": "8BBD3877B6BD015F12D8E55C5870B1A60A4B5C6A0EE980AECE7539FF8DD54D21CE623D07F3868F2A4B35E753C8551A954C3B70FB5B060546697D9507582B69A2",
         "version": "0.0.1",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.1.jar?raw=true",
         "requires":"0.0.1"
