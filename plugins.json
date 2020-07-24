@@ -2,6 +2,22 @@
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "NoMoreAHK",
+    "name": "newplugin name",
+    "description": "newplugin description.",
+    "id": "newplugin-plugin",
+    "releases": [
+      {
+        "date": "2020-07-24",
+        "sha512sum": "9F602A5443ED63257FE0242A4447B2724FFAFA9304145224B2F2F831ABB39019B86F54A00A90A1C9D942A92D44DDA2EE5EC78E80967D6861F9A8F60693354038",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/newplugin-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
     "name": "NoMore Agility",
     "description": "A plugin to assist the creation of an AutoHotkey Agility script.",
     "id": "nomoreagility-plugin",
@@ -31,7 +47,7 @@
       },
       {
         "date": "2020-07-24",
-        "sha512sum": "899CAC1D901CB7C0B7164A8D59FC053DFCDE3A19AD88F6ECE6B1DDB5D3A178657081D47718A2E8010B59ED07011E1BAADF23A785674678005D2B73D4B9AD32C8",
+        "sha512sum": "DF51599529F42A8FE43D237436F8D6B8D97B30BC90699210FEA33C2F280A69E1DF449A2678C24624EFF62DCE948ACB523718A61784BDDF73F1459FC341E2BA29",
         "version": "0.0.2",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.2.jar?raw=true",
         "requires":"0.0.1"

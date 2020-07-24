@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.25">
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\Location.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\Location.java">
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\NoMoreWintertodtConfig.java">
-<error line="29" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
-<error line="52" column="43" severity="error" message="&apos;{&apos; at column 36 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="61" column="41" severity="error" message="&apos;{&apos; at column 34 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="154" column="41" severity="error" message="&apos;{&apos; at column 34 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="201" column="43" severity="error" message="&apos;{&apos; at column 36 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="224" column="44" severity="error" message="&apos;{&apos; at column 37 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="233" column="48" severity="error" message="&apos;{&apos; at column 41 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="242" column="44" severity="error" message="&apos;{&apos; at column 37 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="265" column="35" severity="error" message="&apos;{&apos; at column 28 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="274" column="46" severity="error" message="&apos;{&apos; at column 39 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="283" column="35" severity="error" message="&apos;{&apos; at column 28 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="306" column="35" severity="error" message="&apos;{&apos; at column 28 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\NoMoreWintertodtConfig.java">
+<error line="27" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
+<error line="53" column="43" severity="error" message="&apos;{&apos; at column 36 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="62" column="41" severity="error" message="&apos;{&apos; at column 34 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="155" column="41" severity="error" message="&apos;{&apos; at column 34 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="202" column="43" severity="error" message="&apos;{&apos; at column 36 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="225" column="44" severity="error" message="&apos;{&apos; at column 37 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="234" column="48" severity="error" message="&apos;{&apos; at column 41 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="243" column="44" severity="error" message="&apos;{&apos; at column 37 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="266" column="35" severity="error" message="&apos;{&apos; at column 28 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="275" column="46" severity="error" message="&apos;{&apos; at column 39 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="284" column="35" severity="error" message="&apos;{&apos; at column 28 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="307" column="35" severity="error" message="&apos;{&apos; at column 28 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\NoMoreWintertodtOverlay.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\NoMoreWintertodtOverlay.java">
 <error line="31" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="66" column="48" severity="error" message="&apos;{&apos; at column 34 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="69" column="65" severity="error" message="&apos;{&apos; at column 44 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
@@ -50,7 +50,7 @@
 <error line="206" column="99" severity="error" message="&apos;{&apos; at column 92 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="208" column="44" severity="error" message="&apos;{&apos; at column 30 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\NoMoreWintertodtPlugin.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\NoMoreWintertodtPlugin.java">
 <error line="30" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="35" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 <error line="37" severity="error" message="Multiline imports are disallowed if they are not static" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
@@ -70,13 +70,13 @@
 <error line="157" column="40" severity="error" message="&apos;{&apos; at column 26 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="161" column="81" severity="error" message="&apos;{&apos; at column 67 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\Object.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\Object.java">
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\Objects.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\Objects.java">
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\RenderStyle.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\RenderStyle.java">
 <error line="32" severity="error" message="Indent must use tab characters" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 </file>
-<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\nomorenpchighlight\WidgetStyle.java">
+<file name="C:\Users\thoma\IdeaProjects\nomoreplugins\nomorewintertodt\src\main\java\net\runelite\client\plugins\newplugin\WidgetStyle.java">
 </file>
 </checkstyle>
