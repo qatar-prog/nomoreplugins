@@ -147,9 +147,9 @@ public class NoMoreWintertodtOverlay extends Overlay
 					break;
 				case WAITING:
 					if (plugin.isMinigameActive())
-						widget.setHidden(true);
+						widget.setHidden(false); // fuck knows why this is false.
 					else
-						widget.setHidden(false);
+						widget.setHidden(true); // fuck knows why this is true.
 					break;
 			}
 		}
