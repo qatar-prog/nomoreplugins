@@ -2,15 +2,15 @@
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "NoMoreAHK",
-    "name": "newplugin",
-    "description": "newplugin description.",
-    "id": "newplugin-plugin",
+    "name": "A Plugin Tutorial",
+    "description": "description.",
+    "id": "aplugintutorial-plugin",
     "releases": [
       {
         "date": "2020-07-24",
-        "sha512sum": "878C605B213642A617E63DB2B48F64188EAB951DDE36EEF0FA9B380BC14008BAF0B86A098515BE0824342976AD77DD735F744671E18A5891549631F495724C6F",
+        "sha512sum": "9739578456C64D653951B4B7BBD01002D7D9A19975D4F6246BF5A8F81D55CACAA39B094C3EB071821860175C4EB6D54C437023ACAE3007D3F0A646092996A242",
         "version": "0.0.1",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/newplugin-0.0.1.jar?raw=true",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/aplugintutorial-0.0.1.jar?raw=true",
         "requires":"0.0.1"
       }
     ]

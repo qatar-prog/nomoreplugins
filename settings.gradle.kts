@@ -10,7 +10,7 @@ include(":nomoreinventorytags")
 include(":nomorenpchighlight")
 include(":nomoreobjectindicators")
 include(":amiscplugin")
-include(":newplugin")
+include(":aplugintutorial")
 
 for (project in rootProject.children) {
     project.apply {
