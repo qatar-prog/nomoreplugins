@@ -25,7 +25,7 @@
 
 version = "0.0.1"
 
-project.extra["PluginName"] = "newplugin name"
+project.extra["PluginName"] = "newplugin"
 project.extra["PluginDescription"] = "newplugin description."
 
 tasks {
