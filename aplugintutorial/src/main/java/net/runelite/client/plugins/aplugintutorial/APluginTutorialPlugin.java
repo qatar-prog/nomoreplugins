@@ -46,8 +46,8 @@ import org.pf4j.Extension;
 
 @Extension
 @PluginDescriptor(
-	name = "newplugin",
-	description = "newplugin description.",
+	name = "A Plugin Tutorial",
+	description = "description.",
 	tags = {"newplugin", "nomoreahk"},
 	type = PluginType.UTILITY
 )
