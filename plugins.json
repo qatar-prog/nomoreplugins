@@ -2,7 +2,7 @@
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "NoMoreAHK",
-    "name": "newplugin name",
+    "name": "newplugin",
     "description": "newplugin description.",
     "id": "newplugin-plugin",
     "releases": [
