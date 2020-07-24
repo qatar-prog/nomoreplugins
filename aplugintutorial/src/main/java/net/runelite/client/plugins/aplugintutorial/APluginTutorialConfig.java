@@ -55,7 +55,7 @@ public interface APluginTutorialConfig extends Config
 	@ConfigItem(
 			position = 3,
 			keyName = "secondTitle",
-			name = "Hidden if value 2",
+			name = "Hidden if value2",
 			description = "This will be hidden if Enum1 is Value1.",
 			titleSection = "firstTitle",
 			hidden = true,
