@@ -27,7 +27,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			titleSection = "menu"
 	)
 	default int boxSize() { return 0; }
- 	/*
+
 	@ConfigItem(
 			position = 3,
 			keyName = "combat",
@@ -35,14 +35,14 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			description = "Color",
 			titleSection = "menus"
 	)
-	default Color combatColor() { return Color.CYAN; }
+	default Color combatColor() { return new Color(0,255,255); }
 
 	@ConfigItem(
 			position = 4,
 			keyName = "skills",
 			name = "Skills",
 			description = "Color",
-			titleSection = "skills"
+			titleSection = "menus"
 	)
 	default Color skillsColor() { return Color.CYAN; }
 
@@ -51,7 +51,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "quest",
 			name = "Quests",
 			description = "Color",
-			titleSection = "quest"
+			titleSection = "menus"
 	)
 	default Color questColor() { return Color.CYAN; }
 
@@ -60,7 +60,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "inventory",
 			name = "Inventory",
 			description = "Color",
-			titleSection = "inventory"
+			titleSection = "menus"
 	)
 	default Color inventoryColor() { return Color.CYAN; }
 
@@ -69,7 +69,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "equipment",
 			name = "Equipment",
 			description = "Color",
-			titleSection = "equipment"
+			titleSection = "menus"
 	)
 	default Color equipmentColor() { return Color.CYAN; }
 
@@ -78,7 +78,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "prayer",
 			name = "Prayer",
 			description = "Color",
-			titleSection = "prayer"
+			titleSection = "menus"
 	)
 	default Color prayerColor() { return Color.CYAN; }
 
@@ -87,7 +87,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "magic",
 			name = "Magic",
 			description = "Color",
-			titleSection = "magic"
+			titleSection = "menus"
 	)
 	default Color magicColor() { return Color.CYAN; }
 
@@ -96,7 +96,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "friends",
 			name = "Friends",
 			description = "Color",
-			titleSection = "friends"
+			titleSection = "menus"
 	)
 	default Color friendsColor() { return Color.CYAN; }
 
@@ -105,7 +105,7 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "account",
 			name = "Account",
 			description = "Color",
-			titleSection = "account"
+			titleSection = "menus"
 	)
 	default Color accountColor() { return Color.CYAN; }
 
@@ -114,33 +114,42 @@ public interface NoMoreMenuIndicatorsConfig extends Config
 			keyName = "clan",
 			name = "Clan",
 			description = "Color",
-			titleSection = "clan"
+			titleSection = "menus"
 	)
 	default Color clanColor() { return Color.CYAN; }
 
 	@ConfigItem(
 			position = 13,
+			keyName = "logout",
+			name = "Logout",
+			description = "Color",
+			titleSection = "menus"
+	)
+	default Color logoutColor() { return Color.CYAN; }
+
+	@ConfigItem(
+			position = 14,
 			keyName = "settings",
 			name = "Settings",
 			description = "Color",
-			titleSection = "settings"
+			titleSection = "menus"
 	)
 	default Color settingsColor() { return Color.CYAN; }
 	@ConfigItem(
-			position = 14,
+			position = 15,
 			keyName = "emote",
 			name = "Emote",
 			description = "Color",
-			titleSection = "emote"
+			titleSection = "menus"
 	)
 	default Color emoteColor() { return Color.CYAN; }
 
 	@ConfigItem(
-			position = 15,
+			position = 16,
 			keyName = "music",
 			name = "Music",
 			description = "Color",
-			titleSection = "music"
+			titleSection = "menus"
 	)
-	default Color musicColor() { return Color.CYAN; }*/
+	default Color musicColor() { return Color.CYAN; }
 }
