@@ -11,6 +11,7 @@ include(":nomorenpchighlight")
 include(":nomoreobjectindicators")
 include(":amiscplugin")
 include(":aplugintutorial")
+include(":nomoremenuindicators")
 
 for (project in rootProject.children) {
     project.apply {
