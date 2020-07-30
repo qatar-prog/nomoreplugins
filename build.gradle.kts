@@ -88,7 +88,8 @@ subprojects {
             doLast {
                 copy {
                     from("./build/libs/")
-                    into("../release/")
+                    into(System.getProperty("user.home") + "/.runelite/externalmanager")
+                    //into("./release/")
                 }
             }
         }
