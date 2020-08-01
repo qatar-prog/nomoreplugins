@@ -89,7 +89,7 @@ subprojects {
                 copy {
                     from("./build/libs/")
                     into(System.getProperty("user.home") + "/.runelite/externalmanager")
-                    //into("./release/")
+                    into("../release/")
                 }
             }
         }
