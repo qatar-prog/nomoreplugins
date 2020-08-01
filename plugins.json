@@ -2,6 +2,22 @@
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "NoMoreAHK",
+    "name": "A Misc Plugin",
+    "description": "Misc things and stuff.",
+    "id": "amiscplugin-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "BB7BC14C07E3E30DDB84F5AB82FE7CDD0259640FA1C0DC46D4811A4A891C71C4F481679057610F1FD15AB3F83F88B3AF8FD4226D30AE3AFA7607A752A2522B20",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/amiscplugin-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
     "name": "A Plugin Tutorial",
     "description": "description.",
     "id": "aplugintutorial-plugin",
@@ -34,29 +50,6 @@
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "NoMoreAHK",
-    "name": "NoMore Wintertodt",
-    "description": "A plugin to assist the creation of an AutoHotkey Wintertodt script.",
-    "id": "nomorewintertodt-plugin",
-    "releases": [
-      {
-        "date": "2020-07-21",
-        "sha512sum": "8BBD3877B6BD015F12D8E55C5870B1A60A4B5C6A0EE980AECE7539FF8DD54D21CE623D07F3868F2A4B35E753C8551A954C3B70FB5B060546697D9507582B69A2",
-        "version": "0.0.1",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.1.jar?raw=true",
-        "requires":"0.0.1"
-      },
-      {
-        "date": "2020-07-24",
-        "sha512sum": "8BBD3877B6BD015F12D8E55C5870B1A60A4B5C6A0EE980AECE7539FF8DD54D21CE623D07F3868F2A4B35E753C8551A954C3B70FB5B060546697D9507582B69A2",
-        "version": "0.0.2",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.2.jar?raw=true",
-        "requires":"0.0.1"
-      }
-    ]
-  },
-  {
-    "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMoreAHK",
     "name": "NoMore Combat",
     "description": "A plugin to assist the creation of an AutoHotkey combat script.",
     "id": "nomorecombat-plugin",
@@ -66,38 +59,6 @@
         "sha512sum": "E173D0D1A89200BA483B2A7A1AEC578BBD79A23B8B145AF3C07A7FB91268F22EE7A3798253D9278D24B77E20C4EC4643C853D937F26AEE786EA5D43FDBA18910",
         "version": "0.0.1",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorecombat-0.0.1.jar?raw=true",
-        "requires":"0.0.1"
-      }
-    ]
-  },
-  {
-    "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMoreAHK",
-    "name": "NoMore Skilling",
-    "description": "A plugin to assist the creation of an AutoHotkey skilling script.",
-    "id": "nomoreskilling-plugin",
-    "releases": [
-      {
-        "date": "2020-07-21",
-        "sha512sum": "DED82F815373E33162A69DAF317ED34B172162D361FCD5C462E05928ABD887F6FD7A9BAC3C8A08FFE5D86C48BD41DCB9CBB102A569AB25B469D3DB6684AADDAA",
-        "version": "0.0.1",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoreskilling-0.0.1.jar?raw=true",
-        "requires":"0.0.1"
-      }
-    ]
-  },
-  {
-    "projectUrl": "https://discord.gg/7W9aBCb",
-    "provider": "NoMoreAHK",
-    "name": "A Misc Plugin",
-    "description": "Misc things and stuff.",
-    "id": "amiscplugin-plugin",
-    "releases": [
-      {
-        "date": "2020-07-21",
-        "sha512sum": "BB7BC14C07E3E30DDB84F5AB82FE7CDD0259640FA1C0DC46D4811A4A891C71C4F481679057610F1FD15AB3F83F88B3AF8FD4226D30AE3AFA7607A752A2522B20",
-        "version": "0.0.1",
-        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/amiscplugin-0.0.1.jar?raw=true",
         "requires":"0.0.1"
       }
     ]
@@ -152,6 +113,22 @@
   },
   {
     "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "First to Fall",
+    "name": "NoMore Menu Indicators",
+    "description": "Adds Indicators to Menu Buttons.",
+    "id": "nomoremenuindicators-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "61E0A391B15816D734F454C05889D24B68B048C1A96467C1D152E44D5AB92A499768808568EA08255629662992F548566F0A79176113899E95A50E5220B59915",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoremenuindicators-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
     "provider": "NoMoreAHK",
     "name": "NoMore NPC Highlight",
     "description": "A plugin to render an overlay over non-playable characters.",
@@ -178,6 +155,45 @@
         "sha512sum": "4976213C6C4D15E833256EAA6C2461015FB9565F8E0B14D332073804E4661F4D6F3131DB9B0AFCDCA55E89E060E4859A73E0F069626B012037A56C9E5066C88D",
         "version": "0.0.1",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoreobjectindicators-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore Skilling",
+    "description": "A plugin to assist the creation of an AutoHotkey skilling script.",
+    "id": "nomoreskilling-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "DED82F815373E33162A69DAF317ED34B172162D361FCD5C462E05928ABD887F6FD7A9BAC3C8A08FFE5D86C48BD41DCB9CBB102A569AB25B469D3DB6684AADDAA",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomoreskilling-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      }
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "NoMore Wintertodt",
+    "description": "A plugin to assist the creation of an AutoHotkey Wintertodt script.",
+    "id": "nomorewintertodt-plugin",
+    "releases": [
+      {
+        "date": "2020-07-21",
+        "sha512sum": "8BBD3877B6BD015F12D8E55C5870B1A60A4B5C6A0EE980AECE7539FF8DD54D21CE623D07F3868F2A4B35E753C8551A954C3B70FB5B060546697D9507582B69A2",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
+      },
+      {
+        "date": "2020-07-24",
+        "sha512sum": "8BBD3877B6BD015F12D8E55C5870B1A60A4B5C6A0EE980AECE7539FF8DD54D21CE623D07F3868F2A4B35E753C8551A954C3B70FB5B060546697D9507582B69A2",
+        "version": "0.0.2",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.2.jar?raw=true",
         "requires":"0.0.1"
       }
     ]
