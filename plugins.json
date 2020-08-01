@@ -195,6 +195,22 @@
         "version": "0.0.2",
         "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/nomorewintertodt-0.0.2.jar?raw=true",
         "requires":"0.0.1"
+      },
+    ]
+  },
+  {
+    "projectUrl": "https://discord.gg/7W9aBCb",
+    "provider": "NoMoreAHK",
+    "name": "Player State Indicators",
+    "description": "Displays an indicator based on various player states.",
+    "id": "playerstateindicators-plugin",
+    "releases": [
+      {
+        "date": "2020-08-01",
+        "sha512sum": "9709C43A4A16158954B84461C324E9D24DB541CC8384B591E4455231E5BF3FCC0D0AC2D6C2874730F113C357D685FC834AF447E4551E1ED6E8FE27DECC28D5EA",
+        "version": "0.0.1",
+        "url": "https://github.com/TomMartow/nomoreplugins/blob/master/release/playerstateindicators-0.0.1.jar?raw=true",
+        "requires":"0.0.1"
       }
     ]
   }

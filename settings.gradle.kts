@@ -13,6 +13,7 @@ include(":amiscplugin")
 include(":aplugintutorial")
 include(":chatbox")
 include(":nomoremenuindicators")
+include(":playerstateindicators")
 
 for (project in rootProject.children) {
     project.apply {
