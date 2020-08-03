@@ -56,7 +56,7 @@ import org.pf4j.Extension;
 @Extension
 @PluginDescriptor(
 	name = "Pinqs Pest Control",
-	description = "description.",
+	description = "description. description. description.",
 	tags = {"pinqer"},
 	type = PluginType.MINIGAME
 )
@@ -92,8 +92,8 @@ public class PestControlPlugin extends Plugin {
 	NPC currentNPC;
 	MenuEntry targetMenu;
 	boolean run;
-	boolean thread = true;
-	private int tickDelay = 0;
+	//boolean thread = true;
+	//private int tickDelay = 0;
 	LocalPoint beforeLoc = new LocalPoint(0, 0);
 
 	@Provides
@@ -118,14 +118,15 @@ public class PestControlPlugin extends Plugin {
 	@Subscribe
 	public void onGameTick(GameTick tick) {
 		player = client.getLocalPlayer();
-
+		/*
 		if (tickDelay > 0) {
 			 tickDelay--;
 			 return;
 		}
+		 */
 
-		if (thread) { // Makes sure there's only one thread;
-			thread = false;
+		//if (thread) { // Makes sure there's only one thread;
+			//thread = false;
 			if (!utils.isAnimating() && !utils.isMoving(beforeLoc) && run) {
 				if (!isInPestControl()) {
 					if (!isInBoat()) {
@@ -177,9 +178,9 @@ public class PestControlPlugin extends Plugin {
 					}
 				}
 			}
-			thread = true;
-		}
-		tickDelay = utils.getRandomIntBetweenRange(4,7); // Makes sure the loop only happens every 5 to 7 ticks.
+			//thread = true;
+		//}
+		//tickDelay = utils.getRandomIntBetweenRange(4,7); // Makes sure the loop only happens every 5 to 7 ticks.
 		beforeLoc = client.getLocalPlayer().getLocalLocation();
 	}
 

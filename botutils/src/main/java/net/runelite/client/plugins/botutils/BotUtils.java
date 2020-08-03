@@ -67,10 +67,6 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginType;
 import static net.runelite.client.plugins.botutils.Banks.ALL_BANKS;
-import net.runelite.http.api.ge.GrandExchangeClient;
-import net.runelite.http.api.osbuddy.OSBGrandExchangeClient;
-import net.runelite.http.api.osbuddy.OSBGrandExchangeResult;
-import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
 import org.pf4j.Extension;
 
@@ -78,8 +74,7 @@ import org.pf4j.Extension;
 @PluginDescriptor(
 		name = "BotUtils",
 		type = PluginType.UTILITY,
-		description = "Illumine bot utilities",
-		hidden = false
+		description = "Bot Utilities"
 )
 @Slf4j
 @SuppressWarnings("unused")
@@ -96,17 +91,10 @@ public class BotUtils extends Plugin
 	private ItemManager itemManager;
 
 	@Inject
-	private GrandExchangeClient grandExchangeClient;
-
-	@Inject
-	private OSBGrandExchangeClient osbGrandExchangeClient;
-
-	@Inject
 	ExecutorService executorService;
 
 	MenuEntry targetMenu;
 	protected static final java.util.Random random = new java.util.Random();
-	private OSBGrandExchangeResult osbGrandExchangeResult;
 
 	public boolean randomEvent;
 	public boolean iterating;
@@ -1724,29 +1712,6 @@ public class BotUtils extends Plugin
 	 * GRAND EXCHANGE FUNCTIONS
 	 */
 
-	public OSBGrandExchangeResult getOSBItem(int itemId)
-	{
-		log.debug("Looking up OSB item price {}", itemId);
-		osbGrandExchangeClient.lookupItem(itemId)
-				.subscribe(
-						(osbresult) ->
-						{
-							if (osbresult != null && osbresult.getOverall_average() > 0)
-							{
-								osbGrandExchangeResult = osbresult;
-							}
-						},
-						(e) -> log.debug("Error getting price of item {}", itemId, e)
-				);
-		if (osbGrandExchangeResult != null)
-		{
-			return osbGrandExchangeResult;
-		}
-		else
-		{
-			return null;
-		}
-	}
 
 	/**
 	 * RANDOM EVENT FUNCTIONS

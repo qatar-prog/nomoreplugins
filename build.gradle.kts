@@ -89,7 +89,7 @@ subprojects {
                 copy {
                     from("./build/libs/")
                     //into(System.getProperty("user.home") + "/.runelite/externalmanager") // will build for quick openosrs access
-                    into("../release/") // will build into the release folder.
+                    into("C:\\Users\\ericf\\OneDrive\\Dokument\\JavaProjects\\My Plugin Jars") // will build into the release folder.
                 }
             }
         }
