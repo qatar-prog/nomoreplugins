@@ -9,6 +9,8 @@ plugins {
     checkstyle
 }
 
+project.extra["GithubUrl"] = "https://github.com/Pinqer/nomoreplugins"
+
 apply<BootstrapPlugin>()
 apply<VersionPlugin>()
 
