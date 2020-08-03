@@ -1,4 +1,4 @@
-rootProject.name = "nomoreplugins"
+rootProject.name = "ericsplugins"
 
 include(":nomorewintertodt")
 include(":nomoreagility")
@@ -14,6 +14,9 @@ include(":aplugintutorial")
 include(":chatbox")
 include(":nomoremenuindicators")
 include(":playerstateindicators")
+include(":botutils")
+include(":ExtUtils")
+include(":pestcontrol")
 
 for (project in rootProject.children) {
     project.apply {

@@ -15,13 +15,13 @@ apply<VersionPlugin>()
 subprojects {
     group = "com.openosrs.externals"
 
-    project.extra["PluginProvider"] = "NoMoreAHK"
-    project.extra["ProjectUrl"] = "https://discord.gg/7W9aBCb"
+    project.extra["PluginProvider"] = "Eric"
+    project.extra["ProjectUrl"] = "SUPPORT LINK"
     project.extra["PluginLicense"] = "GNU General Public License v3.0"
 
     repositories {
         maven {
-            url = uri("https://discord.gg/7W9aBCb")
+            url = uri("SUPPORT LINK")
         }
         jcenter()
         maven(url = "https://repo.runelite.net")
@@ -88,8 +88,8 @@ subprojects {
             doLast {
                 copy {
                     from("./build/libs/")
-                    //into(System.getProperty("user.home") + "/.runelite/externalmanager")
-                    into("../release/")
+                    //into(System.getProperty("user.home") + "/.runelite/externalmanager") // will build for quick openosrs access
+                    into("../release/") // will build into the release folder.
                 }
             }
         }

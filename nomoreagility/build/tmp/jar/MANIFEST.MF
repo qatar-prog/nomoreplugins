@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Plugin-Version: 0.0.1
 Plugin-Id: nomoreagility-plugin
-Plugin-Provider: NoMoreAHK
+Plugin-Provider: Eric
 Plugin-Description: A plugin to assist the creation of AHK Agility scrip
  ts.
 Plugin-License: GNU General Public License v3.0
