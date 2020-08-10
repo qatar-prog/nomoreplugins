@@ -516,6 +516,23 @@ public class BotUtils extends Plugin
 				.nearestTo(client.getLocalPlayer());
 	}
 
+	@Nullable
+	public GameObject findNearestBankWithin(WorldPoint worldPoint, int dist)
+	{
+		assert client.isClientThread();
+
+		if (client.getLocalPlayer() == null)
+		{
+			return null;
+		}
+
+		return new GameObjectQuery()
+				.idEquals(ALL_BANKS)
+				.isWithinDistance(worldPoint, dist)
+				.result(client)
+				.nearestTo(client.getLocalPlayer());
+	}
+
 	/*
 	 *
 	 * Returns a list of equipped items
@@ -1296,6 +1313,29 @@ public class BotUtils extends Plugin
 		moveClick(item.getCanvasBounds());
 	}
 
+	public void dropItem(WidgetItem item, int minDelayBetween, int maxDelayBetween)
+	{
+		assert !client.isClientThread();
+
+		sleep(minDelayBetween, maxDelayBetween);
+		targetMenu = new MenuEntry("", "", item.getId(), MenuOpcode.ITEM_DROP.getId(), item.getIndex(), 9764864, false);
+		clickRandomPointCenter(-50,50);
+	}
+
+	public void dropFish() {
+		assert !client.isClientThread();
+
+		WidgetItem fish = getInventoryWidgetItem(335);
+		if (fish != null) {
+			sleep(200, 400);
+			targetMenu = new MenuEntry("Drop", "Fish", fish.getId(), MenuOpcode.ITEM_DROP.getId(),
+					fish.getIndex(), 9764864, false);
+			delayClickRandomPointCenter(-75, 75, getRandomIntBetweenRange(100, 200));
+		}
+	}
+
+
+
 	public void dropItems(Collection<Integer> ids, boolean dropAll, int minDelayBetween, int maxDelayBetween)
 	{
 		if (isBankOpen() || isDepositBoxOpen())
@@ -1752,40 +1792,42 @@ public class BotUtils extends Plugin
 	 */
 	public void sleep(int toSleep)
 	{
-		executorService.submit(() ->
+		try
 		{
-			try {
-				long start = System.currentTimeMillis();
-				Thread.sleep(toSleep);
+			long start = System.currentTimeMillis();
+			Thread.sleep(toSleep);
 
-				// Guarantee minimum sleep
-				long now;
-				while (start + toSleep > (now = System.currentTimeMillis())) {
-					Thread.sleep(start + toSleep - now);
-				}
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			// Guarantee minimum sleep
+			long now;
+			while (start + toSleep > (now = System.currentTimeMillis()))
+			{
+				Thread.sleep(start + toSleep - now);
 			}
-		});
+		}
+		catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	public void sleep(long toSleep)
 	{
-		executorService.submit(() ->
+		try
 		{
-			try {
-				long start = System.currentTimeMillis();
-				Thread.sleep(toSleep);
+			long start = System.currentTimeMillis();
+			Thread.sleep(toSleep);
 
-				// Guarantee minimum sleep
-				long now;
-				while (start + toSleep > (now = System.currentTimeMillis())) {
-					Thread.sleep(start + toSleep - now);
-				}
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			// Guarantee minimum sleep
+			long now;
+			while (start + toSleep > (now = System.currentTimeMillis()))
+			{
+				Thread.sleep(start + toSleep - now);
 			}
-		});
+		}
+		catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	//Ganom's function, generates a random number allowing for curve and weight

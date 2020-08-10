@@ -1,1 +1,1 @@
-# NoMore AHK OpenOSRS Plugins
+# Pinkarns OpenOSRS Plugins
