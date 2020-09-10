@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Plugin-Version: 10.2.10
+Plugin-Version: 0.0.3
 Plugin-Id: pinqscursealch-plugin
 Plugin-Provider: Eric
 Plugin-Dependencies: botutils-plugin

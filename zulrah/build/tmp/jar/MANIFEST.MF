@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Plugin-Version: 0.0.2
+Plugin-Id: pinqszulrah-plugin
+Plugin-Provider: Eric
+Plugin-Dependencies: botutils-plugin
+Plugin-Description: Alpha version // doesnt work
+Plugin-License: GNU General Public License v3.0
+

@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
-Plugin-Version: 10.2.10
-Plugin-Id: pinqsminneeew-plugin
+Plugin-Version: 0.0.4
+Plugin-Id: pinqsminnows-plugin
 Plugin-Provider: Eric
 Plugin-Dependencies: botutils-plugin
-Plugin-Description: Crafts Mud Runes at Eart23h Altar
+Plugin-Description: Handles clicking on spot & moving spot
 Plugin-License: GNU General Public License v3.0
 

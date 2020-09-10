@@ -25,10 +25,10 @@ import javax.print.attribute.standard.MediaSizeName.C
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-version = "10.2.10"
+version = "0.0.4"
 
-project.extra["PluginName"] = "Pinq's Minneeew"
-project.extra["PluginDescription"] = "Crafts Mud Runes at Eart23h Altar"
+project.extra["PluginName"] = "Pinq's Minnows"
+project.extra["PluginDescription"] = "Handles clicking on spot & moving spot"
 
 dependencies {
     compileOnly(project(":botutils"))
