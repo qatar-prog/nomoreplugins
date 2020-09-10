@@ -25,7 +25,7 @@
 
 version = "3.7.5"
 
-project.extra["PluginName"] = "Power Skiller"
+project.extra["PluginName"] = "Illumine's Power Skiller"
 project.extra["PluginDescription"] = "auto power skiller plugin"
 
 dependencies {

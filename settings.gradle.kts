@@ -1,19 +1,6 @@
 rootProject.name = "ericsplugins"
 
-include(":nomorewintertodt")
-include(":nomoreagility")
-include(":nomorecombat")
-include(":nomoreskilling")
-include(":nomoregrounditems")
-include(":nomoregroundmarkers")
-include(":nomoreinventorytags")
-include(":nomorenpchighlight")
-include(":nomoreobjectindicators")
-include(":amiscplugin")
-include(":aplugintutorial")
 include(":chatbox")
-include(":nomoremenuindicators")
-include(":playerstateindicators")
 include(":botutils")
 include(":ExtUtils")
 include(":pestcontrol")
@@ -27,6 +14,15 @@ include(":autologin2")
 include(":autologin3")
 include(":xptracker")
 include(":tickfishing")
+include(":powerskiller")
+include(":pvphelper")
+include(":nightmarezone")
+include(":minnowsbot")
+include(":gargoylefighter")
+include(":fishingtrawler")
+include(":cursealch")
+include(":tickfishinghotkey")
+
 
 for (project in rootProject.children) {
     project.apply {

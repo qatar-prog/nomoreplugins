@@ -25,7 +25,7 @@
 
 version = "0.0.2"
 
-project.extra["PluginName"] = "Pinq's PvP Helper"
+project.extra["PluginName"] = "PvP Helper"
 project.extra["PluginDescription"] = "Boops gamers on the snouse"
 
 dependencies {

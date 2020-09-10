@@ -36,7 +36,7 @@ import net.runelite.client.config.ConfigTitleSection;
 import net.runelite.client.config.Range;
 import net.runelite.client.config.Title;
 
-@ConfigGroup("PowerSkiller")
+@ConfigGroup("PowerSkiller2")
 public interface PowerSkillerConfiguration extends Config
 {
 

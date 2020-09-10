@@ -67,10 +67,10 @@ import static net.runelite.client.plugins.powerskiller.PowerSkillerState.*;
 @Extension
 @PluginDependency(BotUtils.class)
 @PluginDescriptor(
-	name = "Pinq's Power Skiller",
+	name = "Illumine's Power Skiller",
 	enabledByDefault = false,
-	description = "Pinqs Power Skiller",
-	tags = {"fishing, mining, wood-cutting, pinqer, bot, power, skill"},
+	description = "",
+	tags = {"fishing, mining, wood-cutting, bot, power, skill"},
 	type = PluginType.SKILLING
 )
 @Slf4j

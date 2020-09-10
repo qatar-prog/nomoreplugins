@@ -56,6 +56,7 @@ import net.runelite.client.menus.MenuManager;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.concurrent.ExecutorService;
 
 import org.pf4j.Extension;
@@ -113,8 +114,9 @@ public class FishingTrawlerPlugin extends Plugin {
     GameObject boat;
     boolean shouldClickNet = false;
     boolean clickedNet = false;
-    private static final int[] MINIGAME_MAP_REGION = {7499};
+    private static final int[] FILLED_MAP_REGION = {8011};
     int clickedNetCount = 0;
+    Collection<Integer> bail;
 
     boolean run = false;
     boolean thread = false;
@@ -150,7 +152,23 @@ public class FishingTrawlerPlugin extends Plugin {
         }
 
         WorldPoint leakWorldPoint = new WorldPoint(1887, 4827, 0);
-        GameObject leak = utils.findNearestGameObjectWithin(leakWorldPoint, 0, 37355);
+        GameObject leak = utils.findNearestGameObjectWithin(player.getWorldLocation(), 20, 37355);
+        if (isInFilledShip(client)) {
+            utils.sendGameMessage("in filled ship");
+            log.info("is in ffilled ship");
+            bail.add(583);
+            bail.add(585);
+            WidgetItem bailingbucket = utils.getInventoryWidgetItem(bail);
+            if (bailingbucket != null) {
+                targetMenu = new MenuEntry("", "", bailingbucket.getId(), MenuOpcode.ITEM_FIRST_OPTION.getId(), bailingbucket.getIndex(),
+                        WidgetInfo.INVENTORY.getId(), false);
+                utils.delayMouseClick(bailingbucket.getCanvasBounds(), sleepDelay());
+                tickDelay = utils.getRandomIntBetweenRange(2,5);
+            } else {
+                utils.sendGameMessage("Bailing bucket is null");
+            }
+            return;
+        }
         if (leak != null) { // in minigame
             log.info(leak.getWorldLocation().toString());
             targetMenu = new MenuEntry("", "", leak.getId(), MenuOpcode.GAME_OBJECT_FIRST_OPTION.getId(),
@@ -218,10 +236,6 @@ public class FishingTrawlerPlugin extends Plugin {
     //37352 repaired
     NullObjectID yeet;
 
-    private boolean isInMinigame() {
-        return Arrays.equals(client.getMapRegions(), MINIGAME_MAP_REGION);
-    }
-
     @Subscribe
     public void onMenuOptionClicked(MenuOptionClicked event) {
 
@@ -238,6 +252,16 @@ public class FishingTrawlerPlugin extends Plugin {
         sleepLength = utils.randomDelay(false, 300, 500, 30, 400);
         return sleepLength;
     }
+
+    private boolean isInFilledShip(Client client) {
+        if (client.getLocalPlayer() == null) {
+            return false;
+        }
+
+        // Filled ship uses map region 8011
+        return Arrays.equals(client.getMapRegions(), FILLED_MAP_REGION);
+    }
+
 
     public HotkeyListener hotkeyListener = new HotkeyListener(() -> config.toggleKey()) {
         @Override

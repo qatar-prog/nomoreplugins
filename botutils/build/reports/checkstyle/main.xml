@@ -3,12 +3,6 @@
 <file name="C:\Users\ericf\IdeaProjects\nomorepluginsfork\botutils\src\main\java\net\runelite\client\plugins\botutils\Banks.java">
 </file>
 <file name="C:\Users\ericf\IdeaProjects\nomorepluginsfork\botutils\src\main\java\net\runelite\client\plugins\botutils\BotUtils.java">
-<error line="17" column="8" severity="error" message="Unused import - java.util.Optional." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="25" column="8" severity="error" message="Unused import - com.google.inject.Provides." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="1322" column="43" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
-<error line="1325" column="32" severity="error" message="&apos;{&apos; at column 25 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="1329" column="35" severity="error" message="&apos;{&apos; at column 21 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="1884" severity="error" message="Indent must use tab characters" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
 </file>
 <file name="C:\Users\ericf\IdeaProjects\nomorepluginsfork\botutils\src\main\java\net\runelite\client\plugins\botutils\PrayerMap.java">
 </file>

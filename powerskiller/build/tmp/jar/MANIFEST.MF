@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Plugin-Version: 3.7.5
-Plugin-Id: powerskiller-plugin
+Plugin-Id: illuminespowerskiller-plugin
 Plugin-Provider: Eric
 Plugin-Dependencies: botutils-plugin
 Plugin-Description: auto power skiller plugin

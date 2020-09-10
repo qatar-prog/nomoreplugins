@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Plugin-Version: 10.2.10
+Plugin-Id: pinqscursealch-plugin
+Plugin-Provider: Eric
+Plugin-Dependencies: botutils-plugin
+Plugin-Description: Curse alchs npcs for massive gains
+Plugin-License: GNU General Public License v3.0
+

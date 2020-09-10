@@ -163,6 +163,7 @@ public class GargoyleFighterPlugin extends Plugin {
         if (utils.inventoryContains(getAlchItem())) {
             status = "Alching";
             log.info("Alching Item");
+            utils.sendGameMessage("alching items");
             highAlchItem();
             return;
         }
@@ -171,9 +172,11 @@ public class GargoyleFighterPlugin extends Plugin {
         NPC target = utils.findNearestAttackableNpcWithin(player.getWorldLocation(), 40, "Gargoyle");
         if (target != null) { // Found a target
             log.info("Found target");
-            NPC targetingCheck = utils.findNearestNpcTargetingLocal();
+            utils.sendGameMessage("found target");
+            NPC targetingCheck = utils.findNearestNpcTargetingLocal("gargoyle");
             if (player.getInteracting() != null) { // If player is interacting
                 log.info("Interacting");
+                utils.sendGameMessage("interacting");
                 currentNPC = (NPC) player.getInteracting();
                 log.info(String.valueOf(currentNPC.getHealthRatio()));
                 if (currentNPC.getHealthRatio() < 3) {
@@ -182,6 +185,7 @@ public class GargoyleFighterPlugin extends Plugin {
                 ; // do nothing
             } else if (targetingCheck == null) {
                 status = "Attacking Gargoyle";
+                utils.sendGameMessage("attacking gargoyle");
                 log.info("Attacking new target");
                 targetMenu = new MenuEntry("", target.getName() + "(" + target.getId() + ")", target.getIndex(), MenuOpcode.NPC_SECOND_OPTION.getId(),
                         0, 0, false);
@@ -198,6 +202,7 @@ public class GargoyleFighterPlugin extends Plugin {
             //log.info("Modified MenuEntry is null");
         } else {
             log.info("MenuEntry string event: " + targetMenu.toString());
+            utils.sendGameMessage("MenuEntry string event: + targetMenu.toString()");
             event.setMenuEntry(targetMenu);
             targetMenu = null; //this allows the player to interact with the client without their clicks being overridden
         }

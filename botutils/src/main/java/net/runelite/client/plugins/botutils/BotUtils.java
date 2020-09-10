@@ -14,14 +14,15 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Singleton;
+
 import com.google.inject.Provides;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ChatMessageType;
@@ -44,6 +45,7 @@ import net.runelite.api.Varbits;
 import net.runelite.api.WallObject;
 import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldPoint;
+import net.runelite.api.events.MenuEntryAdded;
 import net.runelite.api.events.MenuOptionClicked;
 import net.runelite.api.queries.BankItemQuery;
 import net.runelite.api.queries.DecorativeObjectQuery;
@@ -66,15 +68,26 @@ import net.runelite.client.game.ItemManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginType;
+
 import static net.runelite.client.plugins.botutils.Banks.ALL_BANKS;
+
+import net.runelite.http.api.ge.GrandExchangeClient;
+import net.runelite.http.api.osbuddy.OSBGrandExchangeClient;
+import net.runelite.http.api.osbuddy.OSBGrandExchangeResult;
+import net.runelite.rs.api.RSClient;
+import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
 import org.pf4j.Extension;
 
+/**
+ *
+ */
 @Extension
 @PluginDescriptor(
 		name = "BotUtils",
 		type = PluginType.UTILITY,
-		description = "Bot Utilities"
+		description = "Illumine bot utilities",
+		hidden = false
 )
 @Slf4j
 @SuppressWarnings("unused")
@@ -91,13 +104,39 @@ public class BotUtils extends Plugin
 	private ItemManager itemManager;
 
 	@Inject
+	private GrandExchangeClient grandExchangeClient;
+
+	@Inject
+	private OSBGrandExchangeClient osbGrandExchangeClient;
+
+	@Inject
 	ExecutorService executorService;
 
 	MenuEntry targetMenu;
 	protected static final java.util.Random random = new java.util.Random();
+	private OSBGrandExchangeResult osbGrandExchangeResult;
 
 	public boolean randomEvent;
 	public boolean iterating;
+	private boolean consumeClick;
+	private boolean modifiedMenu;
+	private int modifiedItemID;
+	private int modifiedItemIndex;
+	private int coordX;
+	private int coordY;
+	private boolean walkAction;
+
+	@Provides
+	OSBGrandExchangeClient provideOsbGrandExchangeClient(OkHttpClient okHttpClient)
+	{
+		return new OSBGrandExchangeClient();
+	}
+
+	@Provides
+	GrandExchangeClient provideGrandExchangeClient(OkHttpClient okHttpClient)
+	{
+		return new GrandExchangeClient();
+	}
 
 	@Override
 	protected void startUp()
@@ -221,6 +260,23 @@ public class BotUtils extends Plugin
 	}
 
 	@Nullable
+	public NPC findNearestNpcWithin(WorldPoint worldPoint, int dist, Collection<Integer> ids)
+	{
+		assert client.isClientThread();
+
+		if (client.getLocalPlayer() == null)
+		{
+			return null;
+		}
+
+		return new NPCQuery()
+				.idEquals(ids)
+				.isWithinDistance(worldPoint, dist)
+				.result(client)
+				.nearestTo(client.getLocalPlayer());
+	}
+
+	@Nullable
 	public NPC findNearestNpcWithin(WorldPoint worldPoint, int dist, int... ids)
 	{
 		assert client.isClientThread();
@@ -237,6 +293,7 @@ public class BotUtils extends Plugin
 				.nearestTo(client.getLocalPlayer());
 	}
 
+	//test
 	@Nullable
 	public NPC findNearestNpcWithin(WorldPoint worldPoint, int dist, String... names)
 	{
@@ -255,7 +312,7 @@ public class BotUtils extends Plugin
 	}
 
 	@Nullable
-	public NPC findNearestAttackableNpcWithin(WorldPoint worldPoint, int dist, String... names)
+	public NPC findNearestAttackableNpcWithin(WorldPoint worldPoint, int dist, String name)
 	{
 		assert client.isClientThread();
 
@@ -265,15 +322,14 @@ public class BotUtils extends Plugin
 		}
 
 		return new NPCQuery()
-				.nameContains(names)
 				.isWithinDistance(worldPoint, dist)
-				.filter(npc -> npc.getInteracting() == null && npc.getHealthRatio() != 0)
+				.filter(npc -> npc.getName() != null && npc.getName().toLowerCase().contains(name.toLowerCase()) && npc.getInteracting() == null && npc.getHealthRatio() != 0)
 				.result(client)
 				.nearestTo(client.getLocalPlayer());
 	}
 
 	@Nullable
-	public NPC findNearestNpcTargetingLocal(String... names)
+	public NPC findNearestNpcTargetingLocal(String name)
 	{
 		assert client.isClientThread();
 
@@ -283,8 +339,7 @@ public class BotUtils extends Plugin
 		}
 
 		return new NPCQuery()
-				.nameContains(names)
-				.filter(npc -> npc.getInteracting() == client.getLocalPlayer() && npc.getHealthRatio() != 0)
+				.filter(npc -> npc.getName() != null && npc.getName().toLowerCase().contains(name.toLowerCase()) && npc.getInteracting() == client.getLocalPlayer() && npc.getHealthRatio() != 0)
 				.result(client)
 				.nearestTo(client.getLocalPlayer());
 	}
@@ -516,23 +571,6 @@ public class BotUtils extends Plugin
 				.nearestTo(client.getLocalPlayer());
 	}
 
-	@Nullable
-	public GameObject findNearestBankWithin(WorldPoint worldPoint, int dist)
-	{
-		assert client.isClientThread();
-
-		if (client.getLocalPlayer() == null)
-		{
-			return null;
-		}
-
-		return new GameObjectQuery()
-				.idEquals(ALL_BANKS)
-				.isWithinDistance(worldPoint, dist)
-				.result(client)
-				.nearestTo(client.getLocalPlayer());
-	}
-
 	/*
 	 *
 	 * Returns a list of equipped items
@@ -560,6 +598,7 @@ public class BotUtils extends Plugin
 	 * Returns if a specific item is equipped
 	 *
 	 * */
+
 	public boolean isItemEquipped(Collection<Integer> itemIds)
 	{
 		assert client.isClientThread();
@@ -804,7 +843,8 @@ public class BotUtils extends Plugin
 
 	public int getRandomIntBetweenRange(int min, int max)
 	{
-		return (int) ((Math.random() * ((max - min) + 1)) + min);
+		//return (int) ((Math.random() * ((max - min) + 1)) + min); //This does not allow return of negative values
+		return ThreadLocalRandom.current().nextInt(min, max + 1);
 	}
 
 	private void mouseEvent(int id, @NotNull Point point)
@@ -824,7 +864,7 @@ public class BotUtils extends Plugin
 		assert !client.isClientThread();
 
 		Point point = new Point(getRandomIntBetweenRange(min, max), getRandomIntBetweenRange(min, max));
-		click(point);
+		moveClick(point);
 	}
 
 	public void clickRandomPointCenter(int min, int max)
@@ -865,7 +905,7 @@ public class BotUtils extends Plugin
 
 		if (point.getX() > viewportWidth || point.getY() > viewportHeight || point.getX() < 0 || point.getY() < 0)
 		{
-			clickRandomPointCenter(-200, 200);
+			clickRandomPointCenter(-100, 100);
 			return;
 		}
 		moveClick(point);
@@ -876,7 +916,7 @@ public class BotUtils extends Plugin
 		assert !client.isClientThread();
 
 		Point point = getClickPoint(rectangle);
-		handleMouseClick(point);
+		moveClick(point);
 	}
 
 	public void delayMouseClick(Point point, long delay)
@@ -928,6 +968,47 @@ public class BotUtils extends Plugin
 	public boolean isAnimating()
 	{
 		return client.getLocalPlayer().getAnimation() != -1;
+	}
+
+	/**
+	 * Walks to a scene tile, must be accompanied with a click using it without
+	 * will cause a ban.
+	 **/
+	private void walkTile(int x, int y)
+	{
+		RSClient rsClient = (RSClient) client;
+		rsClient.setSelectedSceneTileX(x);
+		rsClient.setSelectedSceneTileY(y);
+		rsClient.setViewportWalking(true);
+		rsClient.setCheckClick(false);
+	}
+
+	public void walk(LocalPoint localPoint, int rand, long delay)
+	{
+		coordX = localPoint.getSceneX() + getRandomIntBetweenRange(-Math.abs(rand), Math.abs(rand));
+		coordY = localPoint.getSceneY() + getRandomIntBetweenRange(-Math.abs(rand), Math.abs(rand));
+		walkAction = true;
+		targetMenu = new MenuEntry("Walk here", "", 0, MenuOpcode.WALK.getId(),
+				0, 0, false);
+		delayMouseClick(new Point(0, 0), delay);
+	}
+
+	public void walk(WorldPoint worldPoint, int rand, long delay)
+	{
+		LocalPoint localPoint = LocalPoint.fromWorld(client, worldPoint);
+		if (localPoint != null)
+		{
+			coordX = localPoint.getSceneX() + getRandomIntBetweenRange(-Math.abs(rand), Math.abs(rand));
+			coordY = localPoint.getSceneY() + getRandomIntBetweenRange(-Math.abs(rand), Math.abs(rand));
+			walkAction = true;
+			targetMenu = new MenuEntry("Walk here", "", 0, MenuOpcode.WALK.getId(),
+					0, 0, false);
+			delayMouseClick(new Point(0, 0), delay);
+		}
+		else
+		{
+			log.info("WorldPoint to LocalPoint coversion is null");
+		}
 	}
 
 	public boolean isRunEnabled()
@@ -1056,6 +1137,7 @@ public class BotUtils extends Plugin
 		return null;
 	}
 
+	//Requires Inventory visible or returns empty
 	public List<WidgetItem> getInventoryItems(String itemName)
 	{
 		return new InventoryWidgetItemQuery()
@@ -1310,31 +1392,8 @@ public class BotUtils extends Plugin
 		assert !client.isClientThread();
 
 		targetMenu = new MenuEntry("", "", item.getId(), MenuOpcode.ITEM_DROP.getId(), item.getIndex(), 9764864, false);
-		moveClick(item.getCanvasBounds());
+		click(item.getCanvasBounds());
 	}
-
-	public void dropItem(WidgetItem item, int minDelayBetween, int maxDelayBetween)
-	{
-		assert !client.isClientThread();
-
-		sleep(minDelayBetween, maxDelayBetween);
-		targetMenu = new MenuEntry("", "", item.getId(), MenuOpcode.ITEM_DROP.getId(), item.getIndex(), 9764864, false);
-		clickRandomPointCenter(-50,50);
-	}
-
-	public void dropFish() {
-		assert !client.isClientThread();
-
-		WidgetItem fish = getInventoryWidgetItem(335);
-		if (fish != null) {
-			sleep(200, 400);
-			targetMenu = new MenuEntry("Drop", "Fish", fish.getId(), MenuOpcode.ITEM_DROP.getId(),
-					fish.getIndex(), 9764864, false);
-			delayClickRandomPointCenter(-75, 75, getRandomIntBetweenRange(100, 200));
-		}
-	}
-
-
 
 	public void dropItems(Collection<Integer> ids, boolean dropAll, int minDelayBetween, int maxDelayBetween)
 	{
@@ -1418,6 +1477,78 @@ public class BotUtils extends Plugin
 		}
 		Collection<Integer> inventoryItems = getAllInventoryItemIDs();
 		dropItems(inventoryItems, dropAll, minDelayBetween, maxDelayBetween);
+	}
+
+	public void inventoryItemsInteract(Collection<Integer> ids, int opcode, boolean exceptItems, boolean interactAll, int minDelayBetween, int maxDelayBetween)
+	{
+		Collection<WidgetItem> inventoryItems = getAllInventoryItems();
+		executorService.submit(() ->
+		{
+			try
+			{
+				iterating = true;
+				for (WidgetItem item : inventoryItems)
+				{
+					if ((!exceptItems && ids.contains(item.getId()) || (exceptItems && !ids.contains(item.getId()))))
+					{
+						log.info("interacting inventory item: {}", item.getId());
+						sleep(minDelayBetween, maxDelayBetween);
+						setMenuEntry(new MenuEntry("", "", item.getId(), opcode, item.getIndex(), WidgetInfo.INVENTORY.getId(),
+								false));
+						click(item.getCanvasBounds());
+						if (!interactAll)
+						{
+							break;
+						}
+					}
+				}
+				iterating = false;
+			}
+			catch (Exception e)
+			{
+				iterating = false;
+				e.printStackTrace();
+			}
+		});
+	}
+
+	public void inventoryItemsCombine(Collection<Integer> ids, int item1ID, int opcode, boolean exceptItems, boolean interactAll, int minDelayBetween, int maxDelayBetween)
+	{
+		WidgetItem item1 = getInventoryWidgetItem(item1ID);
+		if (item1 == null)
+		{
+			log.info("combine item1 item not found in inventory");
+			return;
+		}
+		Collection<WidgetItem> inventoryItems = getAllInventoryItems();
+		executorService.submit(() ->
+		{
+			try
+			{
+				iterating = true;
+				for (WidgetItem item : inventoryItems)
+				{
+					if ((!exceptItems && ids.contains(item.getId()) || (exceptItems && !ids.contains(item.getId()))))
+					{
+						log.info("interacting inventory item: {}", item.getId());
+						sleep(minDelayBetween, maxDelayBetween);
+						setModifiedMenuEntry(new MenuEntry("", "", item1.getId(), opcode, item1.getIndex(), WidgetInfo.INVENTORY.getId(),
+								false), item.getId(), item.getIndex());
+						click(item1.getCanvasBounds());
+						if (!interactAll)
+						{
+							break;
+						}
+					}
+				}
+				iterating = false;
+			}
+			catch (Exception e)
+			{
+				iterating = false;
+				e.printStackTrace();
+			}
+		});
 	}
 
 	/**
@@ -1662,7 +1793,7 @@ public class BotUtils extends Plugin
 		boolean depositBox = isDepositBoxOpen();
 		targetMenu = new MenuEntry("", "", (depositBox) ? 1 : 2, MenuOpcode.CC_OP.getId(), item.getIndex(),
 				(depositBox) ? 12582914 : 983043, false);
-		moveClick(item.getCanvasBounds());
+		click(item.getCanvasBounds());
 	}
 
 	public void depositAllOfItem(int itemID)
@@ -1752,6 +1883,29 @@ public class BotUtils extends Plugin
 	 * GRAND EXCHANGE FUNCTIONS
 	 */
 
+	public OSBGrandExchangeResult getOSBItem(int itemId)
+	{
+		log.debug("Looking up OSB item price {}", itemId);
+		osbGrandExchangeClient.lookupItem(itemId)
+				.subscribe(
+						(osbresult) ->
+						{
+							if (osbresult != null && osbresult.getOverall_average() > 0)
+							{
+								osbGrandExchangeResult = osbresult;
+							}
+						},
+						(e) -> log.debug("Error getting price of item {}", itemId, e)
+				);
+		if (osbGrandExchangeResult != null)
+		{
+			return osbGrandExchangeResult;
+		}
+		else
+		{
+			return null;
+		}
+	}
 
 	/**
 	 * RANDOM EVENT FUNCTIONS
@@ -1881,27 +2035,106 @@ public class BotUtils extends Plugin
 		return Math.min(min, max) + (n == 0 ? 0 : random.nextInt(n));
 	}
 
-   /*private MenuEntry handleMenuEntry(MenuEntry menuEntry) {
-        if (targetMenu != null)
-        {
-            if (randomEvent)
-            {
-                return;
-            }
-        } else
-        {
-            targetMenu = menuEntry;
-        }
-    }*/
+	public void oneClickCastSpell(WidgetInfo spellWidget, MenuEntry targetMenu, long sleepLength)
+	{
+		setMenuEntry(targetMenu, true);
+		delayMouseClick(new Rectangle(0, 0, 100, 100), sleepLength);
+		setSelectSpell(spellWidget);
+		delayMouseClick(new Rectangle(0, 0, 100, 100), getRandomIntBetweenRange(20, 60));
+	}
+
+	public void oneClickCastSpell(WidgetInfo spellWidget, MenuEntry targetMenu, Rectangle targetBounds, long sleepLength)
+	{
+		setMenuEntry(targetMenu, true);
+		delayMouseClick(targetBounds, sleepLength);
+		setSelectSpell(spellWidget);
+		delayMouseClick(targetBounds, getRandomIntBetweenRange(20, 60));
+	}
+
+	private void setSelectSpell(WidgetInfo info)
+	{
+		final Widget widget = client.getWidget(info);
+
+		client.setSelectedSpellWidget(widget.getId());
+		client.setSelectedSpellChildIndex(-1);
+	}
+
+	public void setMenuEntry(MenuEntry menuEntry)
+	{
+		targetMenu = menuEntry;
+	}
+
+	public void setMenuEntry(MenuEntry menuEntry, boolean consume)
+	{
+		targetMenu = menuEntry;
+		consumeClick = consume;
+	}
+
+	public void setModifiedMenuEntry(MenuEntry menuEntry, int itemID, int itemIndex)
+	{
+		targetMenu = menuEntry;
+		modifiedMenu = true;
+		modifiedItemID = itemID;
+		modifiedItemIndex = itemIndex;
+	}
+
+	@Subscribe
+	private void onMenuEntryAdded(MenuEntryAdded event)
+	{
+		if (event.getOpcode() == MenuOpcode.CC_OP.getId() && (event.getParam1() == WidgetInfo.WORLD_SWITCHER_LIST.getId() ||
+				event.getParam1() == 11927560 || event.getParam1() == 4522007 || event.getParam1() == 24772686))
+		{
+			return;
+		}
+		if (targetMenu != null)
+		{
+			client.setLeftClickMenuEntry(targetMenu);
+			if (modifiedMenu)
+			{
+				event.setModified();
+			}
+		}
+	}
 
 	@Subscribe
 	private void onMenuOptionClicked(MenuOptionClicked event)
 	{
-		//sendGameMessage("do click here in event - utils");
+		if (event.getOpcode() == MenuOpcode.CC_OP.getId() && (event.getParam1() == WidgetInfo.WORLD_SWITCHER_LIST.getId() ||
+				event.getParam1() == 11927560 || event.getParam1() == 4522007 || event.getParam1() == 24772686))
+		{
+			//Either logging out or world-hopping which is handled by 3rd party plugins so let them have priority
+			log.info("Received world-hop/login related click. Giving them priority");
+			targetMenu = null;
+			return;
+		}
 		if (targetMenu != null)
 		{
-			event.setMenuEntry(targetMenu);
+			event.consume();
+			if (consumeClick)
+			{
+				log.info("Consuming a click and not sending anything else");
+				consumeClick = false;
+				return;
+			}
+			if (event.getOption().equals("Walk here") && walkAction)
+			{
+				log.debug("Walk action");
+				walkTile(coordX, coordY);
+				walkAction = false;
+				return;
+			}
+			if (modifiedMenu)
+			{
+				client.invokeMenuAction(targetMenu.getOption(), targetMenu.getTarget(), modifiedItemID, MenuOpcode.ITEM_USE_ON_WIDGET_ITEM.getId(),
+						modifiedItemIndex, targetMenu.getParam1());
+				modifiedMenu = false;
+			}
+			else
+			{
+				client.invokeMenuAction(targetMenu.getOption(), targetMenu.getTarget(), targetMenu.getIdentifier(), targetMenu.getOpcode(),
+						targetMenu.getParam0(), targetMenu.getParam1());
+			}
+			targetMenu = null;
 		}
-		targetMenu = null;
 	}
 }

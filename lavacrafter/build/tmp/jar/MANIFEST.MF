@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Plugin-Version: 0.3.0
-Plugin-Id: ericslavacrafter-plugin
-Plugin-Provider: Eric
-Plugin-Description: Crafts lava runes for you :)
-Plugin-License: GNU General Public License v3.0
-

@@ -38,9 +38,9 @@ import java.util.List;
 @Slf4j
 @PluginDependency(BotUtils.class)
 @PluginDescriptor(
-        name = "Pinq's PvP Helper",
-        description = "Overpowered methods that help you out",
-        tags = {"combat", "player", "enemy", "tracking", "overlay", "pinqer", "op"},
+        name = "Ben63riggs PvP Helper",
+        description = "",
+        tags = {"combat", "player", "enemy", "tracking", "overlay", "op"},
         enabledByDefault = false,
         type = PluginType.PVP
 )
