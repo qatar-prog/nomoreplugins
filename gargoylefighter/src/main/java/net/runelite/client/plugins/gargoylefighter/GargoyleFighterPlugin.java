@@ -256,8 +256,6 @@ public class GargoyleFighterPlugin extends Plugin {
             return ItemID.RUNE_BATTLEAXE;
         } else if (utils.inventoryContains(ItemID.RUNE_PLATELEGS)) {
             return ItemID.RUNE_PLATELEGS;
-        } else if (utils.inventoryContains(ItemID.GRANITE_MAUL)) {
-            return ItemID.GRANITE_MAUL;
         } else if (utils.inventoryContains(ItemID.MYSTIC_ROBE_TOP_DARK)) {
             return ItemID.MYSTIC_ROBE_TOP_DARK;
         } else if (utils.inventoryContains(ItemID.SHIELD_LEFT_HALF)) {
@@ -293,73 +291,6 @@ public class GargoyleFighterPlugin extends Plugin {
                 }
         );
     }
-
-    /*
-    @Subscribe
-    private void onItemSpawned(ItemSpawned event)
-    {
-        log.info("Item spawned not from list: " + event.getItem().getId());
-        tile = event.getTile();
-        item = event.getItem();
-        if (tile.getWorldLocation().distanceTo(client.getLocalPlayer().getWorldLocation()) < 5) {
-            if (item.getId() == ItemID.DEATH_RUNE || item.getId() == ItemID.NATURE_RUNE || item.getId() == ItemID.FIRE_RUNE ||
-                    item.getId() == ItemID.CHAOS_RUNE || item.getId() == ItemID.DEATH_RUNE|| item.getId() == 2360 ||
-                    item.getId() == ItemID.COINS || item.getId() == 2354 || item.getId() == 2358 || item.getId() == 445 ||
-                    item.getId() == 7937 || item.getId() == ItemID.ADAMANT_PLATELEGS || item.getId() == ItemID.RUNITE_ORE ||
-                    item.getId() == ItemID.RUNE_FULL_HELM || item.getId() == ItemID.RUNE_2H_SWORD || item.getId() == ItemID.ADAMANT_BOOTS ||
-                    item.getId() == ItemID.RUNE_BATTLEAXE || item.getId() == ItemID.RUNE_PLATELEGS || item.getId() == ItemID.COINS_995 ||
-                    item.getId() == ItemID.COINS_6964 || item.getId() == ItemID.COINS_8890 || item.getId() == ItemID.RUNE_SPEAR ||
-                    item.getId() == ItemID.SHIELD_LEFT_HALF || item.getId() == ItemID.DRAGON_SPEAR || item.getId() == ItemID.TOOTH_HALF_OF_KEY ||
-                    item.getId() == ItemID.LOOP_HALF_OF_KEY) {
-                status = "Detected item spawn (go pickup)";
-                log.info("Item spawned from list");
-                item = event.getItem();
-                tile = event.getTile();
-            } else {
-                item = null;
-                tile = null;
-            }
-        } else {
-            item = null;
-            tile = null;
-        }
-    }
-
-    @Subscribe
-    private void onItemDespawned(ItemDespawned event)
-    {
-        log.info("Item despawned: " + event.getItem().getId());
-        tile = null;
-        item = null;
-        /*
-        log.info("Item despawned");
-        tile = event.getTile();
-        item = event.getItem();
-        if (tile.getWorldLocation().distanceTo(client.getLocalPlayer().getWorldLocation()) < 30) {
-            if (item.getId() == ItemID.DEATH_RUNE || item.getId() == ItemID.NATURE_RUNE || item.getId() == ItemID.FIRE_RUNE ||
-                    item.getId() == ItemID.CHAOS_RUNE || item.getId() == ItemID.DEATH_RUNE|| item.getId() == 2360 ||
-                    item.getId() == ItemID.COINS || item.getId() == 2354 || item.getId() == 2358 || item.getId() == 445 ||
-                    item.getId() == 7937 || item.getId() == ItemID.ADAMANT_PLATELEGS || item.getId() == ItemID.RUNITE_ORE ||
-                    item.getId() == ItemID.RUNE_FULL_HELM || item.getId() == ItemID.RUNE_2H_SWORD || item.getId() == ItemID.ADAMANT_BOOTS ||
-                    item.getId() == ItemID.RUNE_BATTLEAXE || item.getId() == ItemID.RUNE_PLATELEGS || item.getId() == ItemID.COINS_995 ||
-                    item.getId() == ItemID.COINS_6964 || item.getId() == ItemID.COINS_8890 || item.getId() == ItemID.RUNE_SPEAR ||
-                    item.getId() == ItemID.SHIELD_LEFT_HALF || item.getId() == ItemID.DRAGON_SPEAR || item.getId() == ItemID.TOOTH_HALF_OF_KEY ||
-                    item.getId() == ItemID.LOOP_HALF_OF_KEY) {
-                status = "Detecting Item despawned";
-                log.info("Item despawned from list");
-                item = null;
-                tile = null;
-            } else {
-                item = null;
-                tile = null;
-            }
-        } else {
-            item = null;
-            tile = null;
-        }
-    }
-    */
-
 
     public HotkeyListener hotkeyListener = new HotkeyListener(() -> config.toggleKey()) {
         @Override
