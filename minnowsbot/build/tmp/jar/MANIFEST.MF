@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Plugin-Version: 0.0.4
+Plugin-Id: pinqsminnows-plugin
+Plugin-Provider: Eric
+Plugin-Dependencies: botutils-plugin
+Plugin-Description: Handles clicking on spot & moving spot
+Plugin-License: GNU General Public License v3.0
+

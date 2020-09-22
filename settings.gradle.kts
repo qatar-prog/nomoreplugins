@@ -22,6 +22,8 @@ include(":gargoylefighter")
 include(":fishingtrawler")
 include(":cursealch")
 include(":tickfishinghotkey")
+include(":zulrah")
+include(":motherloadmine")
 
 
 for (project in rootProject.children) {

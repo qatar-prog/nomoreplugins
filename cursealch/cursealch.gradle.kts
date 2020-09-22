@@ -25,7 +25,7 @@ import javax.print.attribute.standard.MediaSizeName.C
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-version = "10.2.10"
+version = "0.0.3"
 
 project.extra["PluginName"] = "Pinq's Curse alch"
 project.extra["PluginDescription"] = "Curse alchs npcs for massive gains"
